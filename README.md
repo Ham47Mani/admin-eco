@@ -22,7 +22,7 @@
   <p align="center">
     Admin-eco Dashboard is a simple react responsive admin eccomerce dashboard.
     <br />
-    <a href="admin-ecco.netlify.app">View Demo</a>
+    <a href="https://admin-ecco.netlify.app/">View Demo</a>
     ·
     <a href="https://github.com/Ham47Mani/admin-eco/issues">Report Bug</a>
     ·
