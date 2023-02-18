@@ -1,0 +1,18 @@
+// ==================== Start Revenue List ====================
+@use "../../sass/abstracts/" as *;
+
+.revenue-list {
+  & > * ~ * { margin-top: calc($spacing / 2) }
+
+  //--- Item
+  &__item {
+    //--- Title
+    &__title {
+      @include flex(space-between,center);
+      margin-bottom: calc($spacing / 6);
+
+      span { font-weight: 700 }
+    }
+  }
+}
+// ==================== End Revenue List ====================

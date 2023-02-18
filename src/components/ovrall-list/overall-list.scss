@@ -1,0 +1,36 @@
+// ======================== Start Overall List ========================
+@use "../../sass/abstracts/" as *;
+
+.overall-list {
+  & > * ~ * { margin-top: calc($spacing / 2) }
+  //--- Item
+  &__item {
+    @include flex(flex-start, center);
+
+    //--- Icon
+    &__icon {
+      --size: 40px;
+      @include flex();
+      width: var(--size);
+      height: var(--size);
+      border-radius: 50%;
+      background-color: $bodyBg;
+      margin-right: $spacing;
+
+      i {
+        font-size: 1.5rem;
+        color: $black;
+      }
+    }
+
+    //--- Info
+    &__info {
+      @include flex(space-between, flex-start);
+      flex-direction: column;
+
+      .title { font-size: 1rem }
+      span { font-size: 1rem }
+    }
+  }
+}
+// ======================== End Overall List ========================

@@ -1,0 +1,39 @@
+// ========================== Start Global Rules ==========================
+//------ Import Sass Files
+@use "../sass/abstracts/" as *;
+
+//------ Import Reboto google Font
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html { overflow-x: hidden }
+
+body {
+  line-height: 1.5;
+  font-family: $fontFamily;
+  font-size: $fontSizeNormal;
+  color: $txtColor;
+  background-color: $bodyBg;
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: unset }
+
+img { width: 100% }
+
+ul, li { list-style-type: none }
+
+.mb { 
+  margin-bottom: calc($spacing / 1.5);
+  @include tablet { margin-bottom: calc($mobileSpacing / 1.5) }
+}
+
+.title { font-size: $fontSizeMedium; font-weight: 700; letter-spacing: 1px }
+.txt-success { color: $green }
+.txt-danger { color: $red }
+// ========================== End Global Rules ==========================

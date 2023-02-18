@@ -1,0 +1,44 @@
+// ==================== Start Flex Grid ====================
+@use "./abstracts/" as *;
+@use "sass:math";
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 math.div($spacing, 2) * (-1);
+
+  @include tablet { margin: 0 math.div($mobileSpacing , 2) * (-1) }
+}
+
+[class*='col-'] {
+  padding: 0 math.div($spacing, 2);
+  @include tablet { padding: 0 math.div($mobileSpacing , 2) }
+}
+
+//--- Large Screen Grid
+@for $i from 1 through $gridNumber {
+  .col-#{$i} {
+    width: (math.div($i, $gridNumber) * 100)*(1%);
+  }
+}
+
+//------ Tablet Grid
+@include tablet {
+  @for $i from 1 through $gridNumber {
+    .col-md-#{$i} {
+      width: (math.div($i, $gridNumber) * 100)*(1%);
+    }
+  }
+  .col-hide-md { display: none }
+}
+
+//------ Mobile Grid
+@include mobile {
+  @for $i from 1 through $gridNumber {
+    .col-sm-#{$i} {
+      width: (math.div($i, $gridNumber) * 100)*(1%);
+    }
+  }
+  .col-hide-sm { display: none }
+}
+// ==================== End Flex Grid ====================

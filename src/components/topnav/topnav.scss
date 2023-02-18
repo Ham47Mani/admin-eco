@@ -1,0 +1,23 @@
+// ===================== Start Top Navbar =====================
+@use "../../sass/abstracts/" as *;
+
+.topnav {
+  @include flex(space-between, center);
+  margin-bottom: $spacing;
+
+  @include tablet { margin-bottom: $mobileSpacing }
+
+  .sidebar-toggle {
+    --size: 40px;
+    width: var(--size);
+    height: var(--size);
+    @include flex();
+    cursor: pointer;
+    display: none;
+
+    @include tablet { display: flex }
+
+    i { font-size: 2.5rem; color: $mainColor }
+  }
+}
+// ===================== End Top Navbar =====================

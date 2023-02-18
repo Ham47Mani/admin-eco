@@ -1,0 +1,33 @@
+// ========================= Start Mixis =========================
+// ========================= Start Mixis =========================
+// ========================= Start Mixis =========================
+@use "_variables.scss" as *;
+
+//------ Flex
+@mixin flex($justify-cotent: center, $align-item: center) {
+  display: flex;
+  justify-content: $justify-cotent;
+  align-items: $align-item;
+}
+
+//------ Mobile
+@mixin mobile {
+  @media only screen and (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+//------ Tablet
+@mixin tablet {
+  @media only screen and (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+//------ Large Screen
+@mixin largeTablet {
+  @media only screen and (min-width: $tablet-width) and (max-width: $largeScreen) {
+    @content;
+  }
+}
+// ========================= End Mixis =========================

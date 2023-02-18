@@ -1,0 +1,30 @@
+// =================== Start User Info ===================
+@use "../../sass/abstracts/" as *;
+
+.user-info {
+  @include flex(flex-start, center);
+  background-color: $mainBg;
+  border-radius: $borderRadius;
+  height: 40px;
+  width: max-content;
+
+  //------ Image
+  &__image {
+    --size: 40px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: $borderRadius;
+
+    img { border-radius: 50% }
+  }
+  //------ Name
+  &__name {
+    padding: 0 $spacing;
+    font-size: $fontSizeMedium;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    @include tablet { padding: 0 $mobileSpacing }
+  }
+}
+// =================== End User Info ===================
