@@ -44,6 +44,8 @@
   @include flex(space-between, center);
   flex-direction: column;
   height: 100%;
+  overflow: hidden;
+
   //--- Title
   &__title {
     font-weight: 700;
